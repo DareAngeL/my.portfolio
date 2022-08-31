@@ -1,5 +1,6 @@
 // Custom Script
 // Developed by: Samson.Onna
+// Customized by: Rene Tajos Jr.
 var customScripts = {
     profile: function () {
         // portfolio
@@ -97,9 +98,6 @@ var customScripts = {
     contactInfo: function () {
         $('.top').on('click', function() {
             $('#email-add').select();
-            // if the user is using a mobile device
-            if (/Mobi|Android/i.test(navigator.userAgent))
-                $('#email-add').setSelectionRange(0, 99999);
             
             navigator.clipboard.writeText($('#email-add')[0].value);
             $('.tooltip-text')[0].innerHTML = 'Copied!';
